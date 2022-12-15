@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Concret.io
+  @group             : 
+  @last modified on  : 12-15-2022
+  @last modified by  : Concret.io
+-->
+
+<template>
+     <div class="slds-box">
+    <lightning-card title="Create User" icon-name="standard:user">
+            <div class=”slds-m-around_medium”>
+                    <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName}
+                            onsuccess={handleSuccess}>
+                            <div class="slds-form-element_horizontal">
+                                    <lightning-input-field field-name="email_opt_in__c" style="padding-top: 1%;">
+                                    </lightning-input-field>
+                            </div>
+                            <div class="slds-clearfix">
+                            <lightning-button variant="brand" onclick={handleClick}
+                                            class="slds-m-left_x-small slds-float_right" style="padding-right: 23px;  padding-top: 5px;" label="Submit" type="submit">
+                            </lightning-button>
+                            </div>
+                    </lightning-record-edit-form>
+            </div>
+    </lightning-card>
+</div>
+</template>
